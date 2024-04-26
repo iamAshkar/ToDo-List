@@ -1,0 +1,140 @@
+/* General styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #114357; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #f29492,
+      #114357
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #f29492,
+      #114357
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fafafa;
+    font-family: "Open Sans", sans-serif;
+    min-height: 100vh;
+
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /* Header */
+  
+  header,
+  form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-family: "Rock Salt", sans-serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.75);
+    letter-spacing: 2px;
+    font-size: 3rem;
+    color: #f5f5f5;
+    cursor: default;
+  }
+  
+  /* Form */
+  
+  form input,
+  form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: #f5f5f5;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+  
+  input,
+  button:focus {
+    outline: 0;
+  }
+  
+  form button {
+    color: #114357;
+    background: #f5f5f5;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  
+  form button:hover {
+    color: #f29492;
+  }
+
+  .selector{
+    width: 200px;
+    height: 50px;
+  }
+
+  .todo-list{
+    text-align: left;
+    list-style: none;
+    perspective: 1000px;
+}
+
+.todo-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color :#ffac81;
+    background-image: linear-gradient(315deg, #ffac81 0%, #ff928b 74%);
+    padding: 10px 15px;
+    margin: 4px 0;  
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    animation: 0.3s ease-in-out;
+    
+}
+
+.fa-trash, .fa-edit{
+    cursor: pointer;
+    background-color: white;
+    padding: 6px 10px;
+    border-radius: 7px;
+    text-align: center;
+    margin-top: 3px;
+    color: #332d2d;
+}
+
+.fa-trash{
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+/* Animate in */
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: rotateX(60deg) translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform:rotateX(0deg) translateY(0px);
+    }
+}
+
+/* Animate out */
+.slideOut{
+    transform: rotateX(60deg) translateY(-10px);
+    opacity: 0;
+    transition: 1s;
+}
+
+
+  
+  
+  
